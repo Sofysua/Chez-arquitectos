@@ -1,0 +1,408 @@
+@import "./variables.scss";
+@import "./colors.scss";
+
+
+// Estilos generales
+* {
+  font-family: $font;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  box-shadow: none !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+*ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+// Clases generales
+@for $i from 1 through 10 {
+  .width-#{$i} {
+    width: 10% * $i;
+  }
+}
+
+// Header
+.logo {
+  width: 300px;
+}
+
+// Inicio
+.max-width-1400{
+  max-width: 1700px;
+}
+//Estudio button scroll
+.estudio img{
+  margin-top: -25px;
+  cursor: pointer;
+  width: 90px !important;
+  filter: brightness(200%);
+}
+
+.gallery {
+  position: relative;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.gallery-image{
+  filter: grayscale(1);
+}
+
+.gallery:hover .gallery-image {
+  filter: grayscale(0);
+  transition: filter 200ms ease-in-out;
+}
+
+.gallery-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255, 0.75);
+  padding: 5px
+}
+
+.img-width {
+  @extend.width-10;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-container {
+  display: grid;
+  @extend.width-10;
+  gap: 10px;
+  grid-template-columns: repeat(9, 2fr);
+}
+
+.contact-form{
+  color: map-get($colors, white);
+  padding: 80px 20px 80px 20px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.contact-form h4{
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+.contact-form a{
+  font-size: 20px;
+  border: 1px solid  map-get($colors, white);
+  padding-inline: 50px;
+  padding-block: 20px;
+}
+
+.contact-form a:hover{
+  background-color:  map-get($colors, white);
+  color: map-get($colors, black);
+  transition: all 300ms ease-in-out;
+}
+/*Contacto*/
+.contact-main{
+  background-image: url("../img/planos.contacto..jpg");
+  background-size: cover;
+  padding-block: 80px;
+  padding-inline: 20px;
+  width: 100vw;
+}
+
+
+textarea {
+  @extend.width-10;
+}
+.contact-inner{
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: 40px;
+  padding-block: 20px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255, 0.75);
+}
+.width-img {
+  @extend.width-10;
+}
+
+.nav-link {
+  color: #efefef;
+}
+
+.navbar-toggler-icon {
+  color: #efefef;
+}
+
+#galeria .col-lg-4 {
+  margin: 0 !important;
+  padding: 25px;
+}
+#galeria img {
+  @extend.width-10;
+}
+#galeria img :hover {
+  border: 5px solid #f7f7f7;
+}
+
+.box {
+  text-align: center;
+}
+
+.nav-link:hover {
+  color: grey;
+}
+
+// Estilos Footer
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: $white;
+  margin-right: 10px;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pie-pagina {
+  @extend.width-10;
+  @if $enable-grey-footer {
+    background-color: map-get($colors, grey);
+  } @else {
+    background-color: map-get($colors, black);
+  }
+  bottom: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+.pie-pagina {
+  bottom: 0;
+}
+
+.pie-pagina .grupo-1 {
+  @extend.width-10;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+  @extend.width-10;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+  width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+  color: map-get($grayscale, "100");
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+  color: map-get($grayscale, "100");
+  margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: #11270b;
+}
+
+.pie-pagina .grupo-2 {
+  background-color: black;
+  padding: 15px 10px;
+  text-align: center;
+  color: map-get($grayscale, "100");
+}
+
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+
+// Nuestro staff
+#rccvideo {
+  width: 100%;
+  height: auto;
+}
+video {
+  object-fit: contain;
+}
+.videocontainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 100px;
+  height: auto;
+}
+.title-big{
+  font-size: calc(23px + (64 - 36) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: bolder;
+}
+.text-big{
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.lined::before {
+  position: relative;
+  right: 100%;
+  margin-right: 10px;
+  width: 80px;
+  height: 10px;
+  background-color: #000;
+  top: 48px;
+}
+
+.lined::before {
+  position: absolute;
+  right: calc( 100% + 30px);
+  top: 30px;
+  width: 50vw;
+  height: 6px;
+}
+
+.lined::after {
+  position: absolute;
+  left: calc( 100% + 30px);
+  top: 30px;
+  width: 50vw;
+  height: 6px;
+}
+
+.staff-title{
+  margin-top: 200px;
+}
+
+.container-description{
+  max-width: 100vw; 
+  overflow: hidden;
+}
+
+.card-staff{
+  padding: 100px;
+}
+.card-staff-inner{
+  max-width: 1300px;
+  margin-inline: auto;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-staff-body{
+  max-width: 900px;
+}
+.card-staff-body h3{
+  margin-bottom: 15px;
+}
+
+.card-staff-image{
+  padding-inline: 20px ;
+}
+
+.card-staff-image img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 8px solid white;
+}
+
+.card-staff-body p{
+ font-size: 20px;
+}
+
+.card-title {
+  padding-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card-image {
+  @extend.width-10;
+}
+
+.card-team {
+  display: flex;
+  padding: 50px 0px 50px 0px;
+  justify-content: space-around;
+}
+.card-team-text {
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 300px;
+}
+
+.card-team-name {
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+.border-white {
+  border: white solid 5px;
+}
+
+
+// Portfolio
+.portfolio-video{
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.portfolio-video p{
+  font-size: 22px !important;
+}
+
+.portfolio-video h3{
+  font-size: 45px !important;
+}
+
+.portfolio-video button {
+  font-size: 22px !important;
+  color: #000;
+}
+
+.video-portfolio{
+  margin-left: 80px;
+  width: 30vw;
+  height: 20vw;
+  object-fit: cover;
+}
+
+.btn-proyects{
+  border: 2px solid map-get($colors, grey);
+  color: map-get($colors, grey);
+
+  padding-inline: 15px;
+  padding-block: 5px;
+  background-color: map-get($colors, white);;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-proyects:hover{
+  background-color: map-get($colors, grey);;
+  color: white;
+}
+
+.carousel-caption{
+  background-color: rgb(0, 0, 0, 0.5) !important;
+}
+@import "./querys.scss";

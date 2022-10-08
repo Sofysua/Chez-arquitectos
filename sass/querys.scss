@@ -1,0 +1,118 @@
+@media only screen and (max-width: 768px) {
+  // General
+
+  .flex {
+    flex-direction: column;
+  }
+
+  // Header
+  .logo {
+    width: 230px;
+  }
+
+  // footer
+  .pie-pagina .grupo-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .videocontainer {
+    margin-bottom: 50px;
+  }
+  .video-text {
+    width: 100%;
+    margin-left: 0px;
+    padding-top: 20px;
+  }
+
+  .staff-title {
+    margin-top: 60px;
+  }
+  .card-staff {
+    padding-inline: 15px;
+    padding-block: 30px;
+  }
+  .card-staff-inner {
+    flex-direction: column;
+  }
+
+  .card-staff-body p {
+    font-size: 10px;
+  }
+
+  .card-team-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 0 auto;
+  }
+
+  .card-team {
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+    text-align: justify;
+    margin: 0 auto 0 auto;
+  }
+
+  .card-team-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .card-team-name {
+    text-align: center;
+  }
+
+  .card-team-text {
+    margin: 0 auto 0 auto;
+  }
+
+  .contact-inner {
+    padding-inline: 20px;
+    padding-block: 10px;
+  }
+  .contact-form h4 {
+    font-size: 30px;
+  }
+  .contact-form a {
+    font-size: 18px;
+  }
+  .portfolio-video {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .portfolio-video p {
+    font-size: 18px !important;
+  }
+
+  .portfolio-video h3 {
+    font-size: 28px !important;
+  }
+
+  .portfolio-video button {
+    font-size: 15px !important;
+  }
+  .video-portfolio {
+    margin-left: 0px;
+    margin-top: 30px;
+    width: 70vw;
+    height: 70vw;
+    margin-inline: auto;
+  }
+
+  .text-big {
+    margin-bottom: 5px;
+    font-size: 1px !important;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .logo {
+    width: 150px;
+  }
+  .contact-form a {
+    display: block;
+  }
+  
+  
+}

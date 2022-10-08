@@ -1,0 +1,33 @@
+$colors: (
+  grey: $grey,
+  light-black:   black,
+  white: $white,
+  black: $black,
+);
+
+@each $key, $value in $colors {
+  .#{$key}-background {
+    background-color: $value !important;
+  }
+}
+
+@each $key, $value in $grayscale {
+  .gray#{$key}-background {
+    background-color: $value;
+  }
+}
+
+.bg-grey {
+  background-color: map-get($colors, grey);
+  color: $light-pink;
+}
+
+.bg-white {
+  background-color: map-get($grayscale, "100");
+  color: #0a141d;
+}
+
+.bg-pink {
+  background-color: $light-pink;
+  color: black;
+}
